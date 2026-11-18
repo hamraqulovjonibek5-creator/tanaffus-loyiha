@@ -1,0 +1,218 @@
+
+/* Barcha elementlar uchun umumiy sozlamalar */
+* {
+    margin: 0; /* Tashqi bo‘shliqni olib tashlaydi */
+    padding: 0; /* Ichki bo‘shliqni olib tashlaydi */
+    box-sizing: border-box; /* O‘lchamlarni to‘g‘ri hisoblaydi */
+}
+
+/* Butun sahifaning asosiy ko‘rinishi */
+body {
+    font-family: Arial, sans-serif; /* Matn shriftini belgilaydi */
+    background: #101827; /* To‘q ko‘k-qora fon beradi */
+    color: white; /* Matn rangini oq qiladi */
+    min-height: 100vh; /* Sahifa balandligini ekran bo‘yicha belgilaydi */
+    display: flex; /* Elementlarni moslashuvchan joylashtiradi */
+    justify-content: center; /* Tarkibni gorizontal markazga joylashtiradi */
+    align-items: center; /* Tarkibni vertikal markazga joylashtiradi */
+    padding: 20px; /* Ekran chetlaridan masofa qoldiradi */
+}
+
+/* Asosiy konteyner dizayni */
+.container {
+    width: 100%; /* Kenglikni moslashuvchan qiladi */
+    max-width: 550px; /* Maksimal kenglikni belgilaydi */
+    background: #1e293b; /* Konteyner fonini belgilaydi */
+    padding: 35px; /* Ichki bo‘shliq beradi */
+    border-radius: 20px; /* Burchaklarni yumaloqlaydi */
+    text-align: center; /* Matnlarni markazga joylashtiradi */
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4); /* Soya effektini beradi */
+}
+
+/* Saytning asosiy sarlavhasi */
+.container h1 {
+    font-size: 30px; /* Sarlavha o‘lchamini belgilaydi */
+    margin-bottom: 30px; /* Pastki masofani belgilaydi */
+    color: #38bdf8; /* Sarlavhani havorang qiladi */
+}
+
+/* Ish taymeri bo‘limi */
+.timer-section {
+    margin-bottom: 30px; /* Pastki masofa beradi */
+}
+
+/* Ish vaqti sarlavhasi */
+.timer-section h2 {
+    font-size: 22px; /* Sarlavha o‘lchamini belgilaydi */
+    color: #cbd5e1; /* Och kulrang rang beradi */
+    margin-bottom: 15px; /* Pastki masofa beradi */
+}
+
+/* Taymerning umumiy ko‘rinishi */
+.timer {
+    font-size: 65px; /* Taymer raqamlarini katta qiladi */
+    font-weight: bold; /* Raqamlarni qalin qiladi */
+    color: #38bdf8; /* Taymer rangini havorang qiladi */
+    letter-spacing: 4px; /* Raqamlar orasini ochadi */
+    margin: 25px 0; /* Yuqori va pastki masofa beradi */
+    text-align: center; /* Taymerni markazga joylashtiradi */
+    font-variant-numeric: tabular-nums; /* Raqamlar kengligini bir xil qiladi */
+}
+
+/* Tugmalar joylashgan qism */
+.buttons {
+    display: flex; /* Tugmalarni yonma-yon joylashtiradi */
+    justify-content: center; /* Tugmalarni markazga joylashtiradi */
+    gap: 12px; /* Tugmalar orasidagi masofani belgilaydi */
+    flex-wrap: wrap; /* Joy yetmasa tugmalarni keyingi qatorga tushiradi */
+    margin-top: 25px; /* Yuqoridan masofa beradi */
+}
+
+/* Barcha tugmalarning umumiy dizayni */
+button {
+    border: none; /* Tugma chegarasini olib tashlaydi */
+    padding: 13px 20px; /* Tugma ichidagi bo‘shliqni belgilaydi */
+    border-radius: 10px; /* Tugma burchaklarini yumaloqlaydi */
+    font-size: 15px; /* Matn o‘lchamini belgilaydi */
+    font-weight: bold; /* Matnni qalin qiladi */
+    cursor: pointer; /* Sichqoncha ko‘rsatkichini o‘zgartiradi */
+    transition: 0.3s; /* Rang o‘zgarishini silliq qiladi */
+}
+
+/* Tugma ustiga sichqoncha olib borilgandagi holat */
+button:hover {
+    transform: translateY(-3px); /* Tugmani biroz yuqoriga ko‘taradi */
+    filter: brightness(1.15); /* Tugmani yorqinroq qiladi */
+}
+
+/* Boshlash tugmasi */
+#startBtn {
+    background: #16a34a; /* Yashil fon beradi */
+    color: white; /* Oq matn beradi */
+}
+
+/* To‘xtatish tugmasi */
+#stopBtn {
+    background: #ea580c; /* To‘q sariq fon beradi */
+    color: white; /* Oq matn beradi */
+}
+
+/* Qayta boshlash tugmasi */
+#resetBtn {
+    background: #2563eb; /* Ko‘k fon beradi */
+    color: white; /* Oq matn beradi */
+}
+
+/* Vaqt sozlamalari bo‘limi */
+.settings {
+    display: flex; /* Elementlarni tartibli joylashtiradi */
+    flex-direction: column; /* Elementlarni ustun shaklida joylashtiradi */
+    text-align: left; /* Matnlarni chapga tekislaydi */
+    gap: 10px; /* Elementlar orasidagi masofani belgilaydi */
+}
+
+/* Vaqt maydonlarining nomlari */
+.settings label {
+    font-size: 15px; /* Matn o‘lchamini belgilaydi */
+    color: #cbd5e1; /* Och kulrang rang beradi */
+    margin-top: 10px; /* Yuqoridan masofa beradi */
+}
+
+/* Vaqt kiritish maydonlari */
+.settings input {
+    width: 100%; /* Maydon kengligini to‘liq qiladi */
+    padding: 13px; /* Ichki bo‘shliq beradi */
+    border: 1px solid #475569; /* Maydon chegarasini belgilaydi */
+    border-radius: 10px; /* Burchaklarni yumaloqlaydi */
+    background: #0f172a; /* To‘q fon beradi */
+    color: white; /* Kiritilgan matnni oq qiladi */
+    font-size: 16px; /* Matn o‘lchamini belgilaydi */
+    outline: none; /* Standart tashqi chiziqni olib tashlaydi */
+}
+
+/* Maydon tanlangandagi ko‘rinish */
+.settings input:focus {
+    border-color: #38bdf8; /* Chegarani havorang qiladi */
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.3); /* Yorqin soya beradi */
+}
+
+/* To‘liq ekranli tanaffus bloki */
+.break-screen {
+    position: fixed; /* Blokni ekranga mahkamlaydi */
+    top: 0; /* Yuqori chetga joylashtiradi */
+    left: 0; /* Chap chetga joylashtiradi */
+    width: 100%; /* Ekran kengligini to‘liq egallaydi */
+    height: 100vh; /* Ekran balandligini to‘liq egallaydi */
+    background: linear-gradient(135deg, #7f1d1d, #1e1b4b); /* To‘q qizil va ko‘k fon beradi */
+    display: none; /* Dastlab yashirin holatda saqlaydi */
+    flex-direction: column; /* Ichidagi elementlarni ustun qiladi */
+    justify-content: center; /* Elementlarni vertikal markazga joylashtiradi */
+    align-items: center; /* Elementlarni gorizontal markazga joylashtiradi */
+    text-align: center; /* Matnlarni markazga tekislaydi */
+    padding: 20px; /* Ekran chetlaridan masofa qoldiradi */
+    z-index: 9999; /* Boshqa elementlardan yuqorida ko‘rsatadi */
+}
+
+/* Tanaffus sarlavhasi */
+.break-screen h1 {
+    font-size: 55px; /* Sarlavhani juda katta qiladi */
+    color: white; /* Sarlavhani oq qiladi */
+    margin-bottom: 20px; /* Pastki masofa beradi */
+    font-weight: bold; /* Matnni qalin qiladi */
+}
+
+/* Tanaffus haqidagi izoh */
+.break-screen p {
+    font-size: 20px; /* Matn o‘lchamini belgilaydi */
+    color: #f8fafc; /* Matnni och oq rang qiladi */
+    margin-bottom: 20px; /* Pastki masofa beradi */
+}
+
+/* Tanaffus taymeri */
+.break-screen .timer {
+    color: white; /* Taymerni oq rang qiladi */
+    font-size: 75px; /* Taymerni kattalashtiradi */
+    margin-top: 20px; /* Yuqoridan masofa beradi */
+}
+
+/* Telefon ekranlari uchun moslashtirish */
+@media (max-width: 600px) {
+
+    /* Asosiy konteynerni moslashtiradi */
+    .container {
+        padding: 22px; /* Ichki bo‘shliqni kamaytiradi */
+    }
+
+    /* Sayt sarlavhasini kichraytiradi */
+    .container h1 {
+        font-size: 25px; /* Sarlavha o‘lchamini kamaytiradi */
+    }
+
+    /* Ish taymerini telefon uchun moslashtiradi */
+    .timer {
+        font-size: 42px; /* Taymer raqamlarini kichraytiradi */
+        letter-spacing: 2px; /* Raqamlar orasidagi masofani kamaytiradi */
+    }
+
+    /* Tugmalarni moslashtiradi */
+    .buttons button {
+        flex: 1 1 100%; /* Tugmalarni alohida qatorga joylashtiradi */
+        padding: 14px; /* Tugmalarni qulay kattalikda qiladi */
+    }
+
+    /* Tanaffus sarlavhasini moslashtiradi */
+    .break-screen h1 {
+        font-size: 35px; /* Sarlavhani kichraytiradi */
+    }
+
+    /* Tanaffus izohini moslashtiradi */
+    .break-screen p {
+        font-size: 16px; /* Matnni kichraytiradi */
+    }
+
+    /* Tanaffus taymerini moslashtiradi */
+    .break-screen .timer {
+        font-size: 48px; /* Taymerni telefon ekraniga moslaydi */
+        letter-spacing: 2px; /* Raqamlar orasini kamaytiradi */
+    }
+}

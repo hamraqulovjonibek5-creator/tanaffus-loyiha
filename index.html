@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<!-- Hujjat HTML5 formatida ekanligini bildiradi -->
+<html lang="uz">
+<!-- Sahifa tili o‘zbek tilida ekanligini belgilaydi -->
+
+<head>
+    <!-- Belgilar kodlash formatini belgilaydi -->
+    <meta charset="UTF-8">
+
+    <!-- Saytni mobil qurilmalarga moslashtiradi -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Brauzer oynasidagi sayt nomini belgilaydi -->
+    <title>Tanaffus eslatuvchi</title>
+
+    <!-- Tashqi CSS faylini ulaydi -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Saytning asosiy konteyneri -->
+    <div class="container">
+
+        <!-- Sayt sarlavhasi -->
+        <h1>Tanaffus eslatuvchi</h1>
+
+        <!-- Ish jarayoni uchun taymer bo‘limi -->
+        <div class="timer-section">
+
+            <!-- Ish taymeri sarlavhasi -->
+            <h2>Ish vaqti</h2>
+
+            <!-- Ish taymerining vaqtini ko‘rsatadi -->
+            <div id="workTimer" class="timer">02:00:00</div>
+
+            <!-- Taymerni boshqarish tugmalari -->
+            <div class="buttons">
+
+                <!-- Taymerni boshlash tugmasi -->
+                <button id="startBtn">Boshlash</button>
+
+                <!-- Taymerni vaqtincha to‘xtatish tugmasi -->
+                <button id="stopBtn">To‘xtatish</button>
+
+                <!-- Taymerni boshidan boshlash tugmasi -->
+                <button id="resetBtn">Qayta boshlash</button>
+
+            </div>
+        </div>
+
+        <!-- Vaqt sozlamalari bo‘limi -->
+        <div class="settings">
+
+            <!-- Ish vaqtini kiritish maydoni -->
+            <label for="workTime">Ish vaqti (daqiqada):</label>
+
+            <!-- Ish vaqtining boshlang‘ich qiymati 120 daqiqa -->
+            <input type="number" id="workTime" value="120" min="1">
+
+            <!-- Tanaffus vaqtini kiritish maydoni -->
+            <label for="breakTime">Tanaffus vaqti (daqiqada):</label>
+
+            <!-- Tanaffus vaqtining boshlang‘ich qiymati 10 daqiqa -->
+            <input type="number" id="breakTime" value="10" min="1">
+
+        </div>
+
+    </div>
+
+    <!-- Tanaffus boshlanganda ko‘rinadigan to‘liq ekranli blok -->
+    <div id="breakScreen" class="break-screen" style="display: none;">
+
+        <!-- Tanaffus haqida katta xabar -->
+        <h1>TANAFFUS VAQTI!</h1>
+
+        <!-- Dam olish haqida eslatma -->
+        <p>Bir oz dam oling va ko‘zlaringizni tinchlantiring!</p>
+
+        <!-- Tanaffus taymerini ko‘rsatadi -->
+        <div id="breakTimer" class="timer">00:10:00</div>
+
+    </div>
+
+    <!-- Tashqi JavaScript faylini ulaydi -->
+    <script src="script.js"></script>
+
+</body>
+<!-- HTML hujjatining yakuni -->
+</html>
